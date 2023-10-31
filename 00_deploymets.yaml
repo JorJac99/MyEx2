@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myex
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myex
+  template:
+    metadata:
+      labels:
+        app: myex
+    spec:
+      containers:
+      - name: myex
+        image: jorjac81/myex2023:0.0.5
+        ports:
+        - containerPort: 3000
