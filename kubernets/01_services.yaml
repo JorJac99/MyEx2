@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myex
+spec:
+  selector:
+    app: myex
+  type: NodePort
+  ports:
+  - port: 3000
+    targetPort: 30004
